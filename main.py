@@ -1,26 +1,30 @@
-from math import sqrt
+"""module nombre premier"""
 
 #### Fonction secondaire
 
 
 def isprime(p):
-
-    # votre code ici
-
-    pass
+    """fonction is prime"""
+    premier  =  True
+    if p == 1:
+        return  False
+    for d in range (2, int(p**0.5) + 1):
+        if p%d == 0:
+            premier = False
+    return  premier
 
 #### Fonction principale
 
 
 def main():
+    """main"""
 
-    # vos appels à la fonction secondaire ici
+    print(f"{13} est premier")
 
     for n in range(100):
         if isprime(n):
             print(n, end=", ")
 
-    print()
 
 
 if __name__ == "__main__":
